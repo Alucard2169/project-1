@@ -8,7 +8,7 @@
 }
 
 body {
-    background: url("/images/1625735156786.png") no-repeat top;
+    background: url("https://github.com/Alucard2169/project-1/blob/main/images/1625735156786.png?raw=true") no-repeat top;
     background-size: cover;
     height: 100vh;
 }
@@ -45,7 +45,7 @@ header {
     }
 
     .btn::before {
-        content: url("/icons/bars-solid.svg");
+         content: url("https://raw.githubusercontent.com/Alucard2169/project-1/26d40223074f152d6b846a70a52136d6478dfe67/icons/bars-solid.svg");
         width: 2rem;
         position: absolute;
         inset: 6px 0 0 8px;
@@ -55,7 +55,7 @@ header {
     }
 
     #menuBtn:checked~.btn::before {
-        content: url("/icons/times-solid.svg");
+        content: url("https://raw.githubusercontent.com/Alucard2169/project-1/26d40223074f152d6b846a70a52136d6478dfe67/icons/times-solid.svg");
         transform: rotate(360deg);
         inset: 1px 0 0 8px;
     }
@@ -116,25 +116,26 @@ header {
 
     }
 
-    .home::after {
-        content: url("/icons/home-solid.svg");
-    }
+ .home::after {
+  content: url("https://raw.githubusercontent.com/Alucard2169/project-1/26d40223074f152d6b846a70a52136d6478dfe67/icons/home-solid.svg");
+}
 
-    .dash::after {
-        content: url("/icons/th-large-solid.svg");
-    }
+.dash::after {
+  content: url("https://raw.githubusercontent.com/Alucard2169/project-1/26d40223074f152d6b846a70a52136d6478dfe67/icons/th-large-solid.svg");
+}
 
-    .about::after {
-        content: url("/icons/eject-solid.svg")
-    }
+.about::after {
+  content: url("https://raw.githubusercontent.com/Alucard2169/project-1/26d40223074f152d6b846a70a52136d6478dfe67/icons/eject-solid.svg");
+}
 
-    .contact::after {
-        content: url("/icons/id-badge-solid.svg");
-    }
+.contact::after {
+  content: url("https://raw.githubusercontent.com/Alucard2169/project-1/26d40223074f152d6b846a70a52136d6478dfe67/icons/id-badge-solid.svg");
+}
 
-    .topics::after {
-        content: url("/icons/shapes-solid.svg");
-    }
+.topics::after {
+  content: url("https://raw.githubusercontent.com/Alucard2169/project-1/26d40223074f152d6b846a70a52136d6478dfe67/icons/shapes-solid.svg");
+}
+
 
     .special {
         background: none;
@@ -149,7 +150,7 @@ header {
     }
 
     label::before {
-        content: url("/icons/adjust-solid.svg");
+        content: url("https://raw.githubusercontent.com/Alucard2169/project-1/26d40223074f152d6b846a70a52136d6478dfe67/icons/adjust-solid.svg");
         inset: 0 0 0 -15px;
         width: 2rem;
         position: absolute;
