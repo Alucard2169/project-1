@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: url("/images/1625735156786.png") no-repeat top;
+  background-size: cover;
+  height: 100vh;
+}
+
+header {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+header .navbar-toggle {
+  opacity: 0;
+  display: none;
+  -webkit-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
+}
+
+header #menuBtn {
+  display: none;
+}
+
+header #menuBtn:checked ~ .navbar-toggle {
+  opacity: 1;
+  display: block;
+}
+
+header .btn {
+  position: relative;
+  margin: -2rem 0 0 .5rem;
+  background: purple;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+}
+
+header .btn::before {
+  content: url("/icons/bars-solid.svg");
+  width: 2rem;
+  position: absolute;
+  inset: 6px 0 0 8px;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+header #menuBtn:checked ~ .btn::before {
+  content: url("/icons/times-solid.svg");
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  inset: 1px 0 0 8px;
+}
+
+header #menuBtn:checked ~ .btn {
+  background: none;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 8rem;
+  gap: 3rem;
+}
+
+.navbar .items,
+.navbar .special {
+  background: rgba(141, 3, 141, 0.7);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  text-align: center;
+  font-weight: 600;
+  position: relative;
+  outline: 3px white solid;
+  -webkit-transition: all ease-in-out 400ms;
+  transition: all ease-in-out 400ms;
+}
+
+.navbar .items:hover {
+  outline-offset: -10px;
+}
+
+.navbar .items::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  background: #8d038d;
+  border-radius: 50px;
+  inset: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 400ms ease-in;
+  transition: -webkit-transform 400ms ease-in;
+  transition: transform 400ms ease-in;
+  transition: transform 400ms ease-in, -webkit-transform 400ms ease-in;
+}
+
+.navbar .items:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.navbar .items::after {
+  position: absolute;
+  width: 2rem;
+  inset: 10px 0 0 -60px;
+  -webkit-transition: width 400ms ease-in-out;
+  transition: width 400ms ease-in-out;
+}
+
+.navbar .items:hover::after {
+  width: 2.5rem;
+}
+
+.navbar .home::after {
+  content: url("/icons/home-solid.svg");
+}
+
+.navbar .dash::after {
+  content: url("/icons/th-large-solid.svg");
+}
+
+.navbar .about::after {
+  content: url("/icons/eject-solid.svg");
+}
+
+.navbar .contact::after {
+  content: url("/icons/id-badge-solid.svg");
+}
+
+.navbar .topics::after {
+  content: url("/icons/shapes-solid.svg");
+}
+
+.navbar .special {
+  background: none;
+}
+
+.navbar #lights {
+  display: none;
+}
+
+.navbar label {
+  position: relative;
+}
+
+.navbar label::before {
+  content: url("/icons/adjust-solid.svg");
+  inset: 0 0 0 -15px;
+  width: 2rem;
+  position: absolute;
+}
+
+.navbar a {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

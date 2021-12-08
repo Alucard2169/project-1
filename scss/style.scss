@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body {
+    background: url("/images/1625735156786.png") no-repeat top;
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    transform-origin: left;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    .navbar-toggle {
+        opacity: 0;
+        display: none;
+        transition: opacity 400ms ease-in-out;
+    }
+
+    #menuBtn {
+        display: none;
+    }
+
+    #menuBtn:checked~.navbar-toggle {
+        opacity: 1;
+        display: block;
+
+    }
+
+    .btn {
+        position: relative;
+        margin: -2rem 0 0 .5rem;
+        background: purple;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 10px;
+    }
+
+    .btn::before {
+        content: url("/icons/bars-solid.svg");
+        width: 2rem;
+        position: absolute;
+        inset: 6px 0 0 8px;
+        transition: transform 400ms ease-in-out;
+        transform-origin: center;
+
+    }
+
+    #menuBtn:checked~.btn::before {
+        content: url("/icons/times-solid.svg");
+        transform: rotate(360deg);
+        inset: 1px 0 0 8px;
+    }
+
+    #menuBtn:checked~.btn {
+        background: none;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8rem;
+    gap: 3rem;
+
+    .items,
+    .special {
+        background: rgba(141, 3, 141, .7);
+        padding: 1rem 1.5rem;
+        border-radius: 50px;
+        text-align: center;
+        font-weight: 600;
+        position: relative;
+        outline: 3px white solid;
+        transition: all ease-in-out 400ms;
+    }
+
+    .items:hover {
+        outline-offset: -10px;
+    }
+
+    .items::before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        background: rgba(141, 3, 141, 1);
+        border-radius: 50px;
+        inset: 0;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 400ms ease-in;
+    }
+
+    .items:hover::before {
+        transform: scaleX(1);
+
+    }
+
+    .items::after {
+        position: absolute;
+        width: 2rem;
+        inset: 10px 0 0 -60px;
+        transition: width 400ms ease-in-out;
+    }
+
+    .items:hover::after {
+        width: 2.5rem;
+
+    }
+
+    .home::after {
+        content: url("/icons/home-solid.svg");
+    }
+
+    .dash::after {
+        content: url("/icons/th-large-solid.svg");
+    }
+
+    .about::after {
+        content: url("/icons/eject-solid.svg")
+    }
+
+    .contact::after {
+        content: url("/icons/id-badge-solid.svg");
+    }
+
+    .topics::after {
+        content: url("/icons/shapes-solid.svg");
+    }
+
+    .special {
+        background: none;
+    }
+
+    #lights {
+        display: none;
+    }
+
+    label {
+        position: relative;
+    }
+
+    label::before {
+        content: url("/icons/adjust-solid.svg");
+        inset: 0 0 0 -15px;
+        width: 2rem;
+        position: absolute;
+    }
+
+    a {
+        color: white;
+    }
+
+
+}
